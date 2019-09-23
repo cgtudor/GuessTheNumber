@@ -6,13 +6,20 @@ namespace GuessTheNumber
     {
         static void Main(string[] args)
         {
+            int attempts = 20;
             Random random = new Random();
             int randomNumber = random.Next(100);
-            Console.WriteLine("Input a number between 0 and 100");
+            Console.WriteLine("Input a number between 0 and 100, you have " + attempts + " attempts.");
             int guess = Int32.Parse(Console.ReadLine());
             while(randomNumber != guess)
             {
-                Console.WriteLine("Oops, wrong number, the number was " + randomNumber + ". Try again!");
+                attempts--;
+                if (attempts == 0)
+                {
+                    Console.WriteLine("Sorry, you lost");
+                    return;
+                }
+                Console.WriteLine("Oops, wrong number, the number was " + randomNumber + ". Try again! You have " + attempts + " attempts left.");
                 randomNumber = random.Next(100);
                 Console.WriteLine("Input a number between 0 and 100");
                 guess = Int32.Parse(Console.ReadLine());
