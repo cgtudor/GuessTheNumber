@@ -6,12 +6,25 @@ namespace GuessTheNumber
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Choose gamemode:\n1. Player guessing\n2. Computer guessing");
+            int choice = Int32.Parse(Console.ReadLine());
+            if(choice == 1)
+            {
+                PlayerGuesses();
+            }
+            else if(choice == 2)
+            {
+                ComputerGuesses();
+            }
+        }
+        static public void PlayerGuesses()
+        {
             Random random = new Random();
             int randomNumber = 0;
             int attempts = 0;
             Console.WriteLine("Please select difficulty: 1 for easy, 2 for medium and 3 for hard");
             int choice = Int32.Parse(Console.ReadLine());
-            switch(choice)
+            switch (choice)
             {
                 case 1:
                     attempts = 20;
@@ -30,7 +43,7 @@ namespace GuessTheNumber
                     break;
             }
             int guess = Int32.Parse(Console.ReadLine());
-            while(randomNumber != guess)
+            while (randomNumber != guess)
             {
                 attempts--;
                 if (attempts == 0)
@@ -38,7 +51,7 @@ namespace GuessTheNumber
                     Console.WriteLine("Sorry, you lost");
                     return;
                 }
-                if(randomNumber > guess)
+                if (randomNumber > guess)
                     Console.WriteLine("Oops, wrong number, the number was too low. Try again! You have " + attempts + " attempts left.");
                 else
                     Console.WriteLine("Oops, wrong number, the number was too high. Try again! You have " + attempts + " attempts left.");
@@ -46,6 +59,37 @@ namespace GuessTheNumber
                 guess = Int32.Parse(Console.ReadLine());
             }
             Console.WriteLine("Congrats! You got it");
+        }
+        static public void ComputerGuesses()
+        {
+            Console.WriteLine("Think of a number between 1 and 100 and I will try to guess it! I have 20 attempts");
+            Random random = new Random();
+            int attempts = 20;
+            int guess = random.Next(1, 100);
+            Console.WriteLine("My guess is " + guess + ". Am I right?\n1. Correct!\n2. Too high!\n3. Too low!");
+            int choice = Int32.Parse(Console.ReadLine());
+            while(choice != 1)
+            {
+                attempts--;
+                if(attempts == 0)
+                {
+                    Console.WriteLine("I lost :(");
+                    return;
+                }
+                Console.WriteLine("I have " + attempts + " left");
+                if (choice == 2)
+                {
+                    guess = random.Next(1, guess - 1);
+                    Console.WriteLine("My guess is " + guess + ". Am I right?\n1. Correct!\n2. Too high!\n3. Too low!");
+                }
+                else if(choice == 3)
+                {
+                    guess = random.Next(guess + 1, 100);
+                    Console.WriteLine("My guess is " + guess + ". Am I right?\n1. Correct!\n2. Too high!\n3. Too low!");
+                }
+                choice = Int32.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Yay! I won!!");
         }
     }
 }
