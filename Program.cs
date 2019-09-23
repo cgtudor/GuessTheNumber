@@ -19,7 +19,10 @@ namespace GuessTheNumber
                     Console.WriteLine("Sorry, you lost");
                     return;
                 }
-                Console.WriteLine("Oops, wrong number, the number was " + randomNumber + ". Try again! You have " + attempts + " attempts left.");
+                if(randomNumber > guess)
+                    Console.WriteLine("Oops, wrong number, the number was too low. Try again! You have " + attempts + " attempts left.");
+                else
+                    Console.WriteLine("Oops, wrong number, the number was too high. Try again! You have " + attempts + " attempts left.");
                 randomNumber = random.Next(100);
                 Console.WriteLine("Input a number between 0 and 100");
                 guess = Int32.Parse(Console.ReadLine());
