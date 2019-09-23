@@ -1,0 +1,62 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\v8002382\\source\\repos\\GuessTheNumber\\GuessTheNumber\\GuessTheNumber.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\v8002382\\source\\repos\\GuessTheNumber\\GuessTheNumber\\GuessTheNumber.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\v8002382\\source\\repos\\GuessTheNumber\\GuessTheNumber\\GuessTheNumber.csproj",
+        "projectName": "GuessTheNumber",
+        "projectPath": "C:\\Users\\v8002382\\source\\repos\\GuessTheNumber\\GuessTheNumber\\GuessTheNumber.csproj",
+        "packagesPath": "C:\\Users\\v8002382\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\v8002382\\source\\repos\\GuessTheNumber\\GuessTheNumber\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\v8002382\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
