@@ -157,7 +157,10 @@ namespace GuessTheNumber
                 if (choice == 3)
                 {
                     int tempGuess = guess;
-                    guess = random.Next(guess + 1, maxguess-1);
+                    if(maxguess - guess > 5)
+                        guess = (maxguess + guess) / 2;
+                    else
+                        guess = random.Next(guess + 1, maxguess-1);
                     if (guess > minguess)
                         minguess = tempGuess;
                     Console.WriteLine("My guess is " + guess + ". Am I right?\n1. Correct!\n2. Too high!\n3. Too low!");
@@ -165,6 +168,9 @@ namespace GuessTheNumber
                 else if(choice == 2)
                 {
                     int tempGuess = guess;
+                    if(maxguess - guess > 5)
+                        guess = (minguess + guess) / 2;
+                    else
                     guess = random.Next(minguess+1, guess - 1);
                     if (guess < maxguess)
                         maxguess = tempGuess;

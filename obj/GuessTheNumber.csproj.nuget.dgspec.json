@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\v8002382\\Source\\repos\\GuessTheNumber\\GuessTheNumber\\GuessTheNumber.csproj": {}
+    "C:\\Users\\v8002382\\source\\repos\\GuessTheNumber\\GuessTheNumber.csproj": {}
   },
   "projects": {
-    "C:\\Users\\v8002382\\Source\\repos\\GuessTheNumber\\GuessTheNumber\\GuessTheNumber.csproj": {
+    "C:\\Users\\v8002382\\source\\repos\\GuessTheNumber\\GuessTheNumber.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\v8002382\\Source\\repos\\GuessTheNumber\\GuessTheNumber\\GuessTheNumber.csproj",
+        "projectUniqueName": "C:\\Users\\v8002382\\source\\repos\\GuessTheNumber\\GuessTheNumber.csproj",
         "projectName": "GuessTheNumber",
-        "projectPath": "C:\\Users\\v8002382\\Source\\repos\\GuessTheNumber\\GuessTheNumber\\GuessTheNumber.csproj",
+        "projectPath": "C:\\Users\\v8002382\\source\\repos\\GuessTheNumber\\GuessTheNumber.csproj",
         "packagesPath": "C:\\Users\\v8002382\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\v8002382\\Source\\repos\\GuessTheNumber\\GuessTheNumber\\obj\\",
+        "outputPath": "C:\\Users\\v8002382\\source\\repos\\GuessTheNumber\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
